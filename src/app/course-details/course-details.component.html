@@ -1,0 +1,23 @@
+
+  <div class="card">
+    <ul  *ngFor="let item of items" style="list-style-type: none;" class=" p-2 mb-0">
+      <h6>{{item.title }}</h6>
+      <li *ngFor="let itemz of item.course_code">
+        <span *ngIf="(item.type == 'text')">{{ itemz.name }}</span>
+      </li>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" *ngFor="let itemz of item.course_code_number">
+      <button class="btn btn-info btn-sm" *ngFor="let btn of itemz.name" 
+      [ngStyle]="{ 'background-color': item.bgColor }" [ngClass]="{'important-text': (item.title == 'Mapped to this Course') ? true : false}">{{btn.code}}</button>
+    </div>
+  </div>
+</div>
+     
+    
+      <mat-divider></mat-divider>
+    </ul>
+  </div>
+
+
+  

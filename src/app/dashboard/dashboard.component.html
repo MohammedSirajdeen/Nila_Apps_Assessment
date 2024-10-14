@@ -1,0 +1,75 @@
+<section>
+    <div class="container-fluid">
+        <div class="row" >
+            <div class="col-md-12">
+                <div  class="col-md-auto nav-buttons d-flex dashbtn">
+                    <button class="btn btn-light btn-sm">{{' < Programs'}}</button> &nbsp;
+                    <button class="btn btn-light btn-sm">{{' < Master in Business Adminstration - MBA'}}</button>  &nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2" >
+            <p class="col-md-12"><b>Program Educational Objectives (PEOs)</b></p>
+            <div class="col-md-2 p-2" *ngFor="let bdata of buttons; let i = index">
+                <div class="card w-100 pointer" (click)="buttonClick(bdata.id)">
+                    <div class="card-body" [ngClass]="(buttonId == i) ? 'bottom-brace-bl' : ' '">
+                      <h5 class="card-title" style="font-size: 12px;">{{bdata.title}} </h5>
+                      <span style="float:inline-end"><mat-icon _ngcontent-wde-c92="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">{{bdata.icon}}</mat-icon>
+                      </span>
+                      <p class="card-text" style="font-size: 12px;">{{bdata.des}} </p>
+                      
+                     
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <mat-accordion>
+                    <button class="btn btn-light mb-1" style="width: 100%;font-size: 12px;text-align: left;background-color: #fff;">Program Outcomes</button>
+                    <mat-expansion-panel *ngFor="let item of items;let i = index"  [ngClass]="(item.id == i + 1) ? 'left-brace-bl' : ' '">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title> 
+                             <p class="p-2"><span class="mb-2" style="font-size: 12px;"><button class="btn btn-sm btn-info" [ngStyle]="{ 'background-color': item.bgColor }" [ngClass]="{'important-text': true}">{{item.code}}</button>  Evaluation : 5 out of 12</span>
+                              <br><span class="p-2">{{ item.title }}</span></p>
+                            </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <div class="d-flex"><progress class="colored" id="file" [value]="item.progress" max="100"></progress> &nbsp; &nbsp;<span class="mb-0">{{item.progress+ '%'}} </span></div>
+                      <p><span style="font-size: 12px;color:#efad14 !important;">Description</span> <br>{{ item.content }}</p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                  
+            </div>
+           
+            <div class="col-md-9 card">
+               <div class="">
+                <div class="row">
+                    <div class="col-md-4">
+                        <app-course-details class="p-2 mt-2"></app-course-details>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row headline p-2">
+                            <div class="col-md-12">
+                                <div class="col-md-auto nav-button d-flex">
+                                <button class="btn btn-light"><span>Total Students </span> &nbsp;<span><b>102</b></span></button>
+                                <button class="btn btn-light"><span>Course Average Mark</span> &nbsp;<span><b>85%</b></span></button>
+
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <app-assessment-progress class="p-2  card"></app-assessment-progress>
+                           </div>
+                            <div class="col-md-12">
+                                <app-students-attendance class="p-2 mt-2 mb-2 card"></app-students-attendance>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>

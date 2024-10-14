@@ -1,0 +1,49 @@
+.sidebar {
+    width: 150px;
+    background: #fff;
+    color: #2471a3;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .content {
+  margin-left: 250px; /* Adjust this based on sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.active + .content {
+  margin-left: 0; /* Remove margin when sidebar is active */
+}
+  .sidebar.active {
+    left: 0;
+    width: 55px;
+  }
+  
+  .hamburger {
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  mat-icon {
+    margin-right: 10px;
+    color: #2471a3 !important;
+    cursor: pointer;
+  }
+  

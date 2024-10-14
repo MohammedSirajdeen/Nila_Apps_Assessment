@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Nila_Apps_Assessment';
+
+  isSidebarActive = false;
+
+  onToggleSidebar(isActive: boolean) {
+    this.isSidebarActive = isActive; // Update the state based on emitted value
+  }
+  
 }

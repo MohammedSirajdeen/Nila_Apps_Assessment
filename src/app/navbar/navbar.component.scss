@@ -1,0 +1,194 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #2471a3 !important;
+  color: white;
+  // transition: margin-left 0.3s ease;
+  margin-left: 55px;
+}
+
+.mlogo{
+  display: none;
+}
+
+.shifted {
+  margin-left: 150px; /* Adjust based on sidebar width */
+}
+
+.nshifted{
+  margin-left: 55px; /* Adjust based on sidebar width */
+}
+/* Other styles */
+
+
+.logo img {
+  height: 40px; /* Adjust as needed */
+}
+
+.navbar {
+  padding: 10px;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.mat-form-field {
+  margin: 0 10px;
+}
+
+.location-select {
+  min-width: 150px; /* Adjust width as needed */
+}
+
+/* Profile Icon */
+.profile-icon {
+  cursor: pointer;
+  font-size: 28px;
+  padding-left: 3rem;
+}
+
+
+.search-icon{
+  cursor: pointer;
+  font-size: 28px;
+  padding-right: 1rem;
+}
+/* Mobile responsiveness */
+@media (max-width: 766px) {
+  .container-fluid {
+    flex-direction: column;
+    align-items: end;
+  }
+  .navbar-nav {
+    display: none !important;
+  }
+
+  .mlogo{
+    display: block;
+  }
+  .ml-auto {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .form-inline {
+    width: 100%;
+  }
+
+  .wrap {
+    width: 55%;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-60%, 10%) !important;
+  }
+}
+
+
+::ng-deep .mat-select-min-line,
+::ng-deep .mat-form-field-underline,
+::ng-deep .mat-select-arrow, 
+::ng-deep .mat-form-field-appearance-legacy {
+  color: #fff !important; /* Change color to white */
+}
+
+
+.search-container {
+  display: flex;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.search-container .mat-icon{
+  font-size: 28px;
+}
+.search-container input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.3s; /* Smooth transition for width */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align to start */
+  }
+
+  .search-container {
+    width: 100%; /* Full width on small screens */
+    margin-top: 10px; /* Space between logo and search bar */
+  }
+
+  .search-container input {
+    width: 80%; /* Take most of the space */
+  }
+.search-icon{
+  display: none;
+}
+}
+
+@media (max-width: 786px) {
+  
+  .search-container input {
+    width: 75%; /* Take most of the space */
+  }
+}
+
+.search {
+  width: 80%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 55%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+

@@ -1,0 +1,20 @@
+.container-fluid {
+  margin-top: 10px;
+}
+
+.row {
+  justify-content: flex-start; /* Align items to the start */
+}
+
+.btn {
+  margin: 5px; /* Adjust spacing between buttons */
+  border-radius: none !important;
+}
+.btn-info{
+  --bs-btn-border-color : #fff !important;
+  --bs-btn-hover-border-color : #ffff !important
+}
+
+.important-text {
+  color: #fff !important; /* Replace 'red' with a color you want */
+}

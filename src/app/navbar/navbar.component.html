@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" [ngClass]="(!isSidebarActive) ? 'nshifted' : ' shifted'">
+
+  <div  class="mlogo"><a href="#" class="navbar-brand"><img src="https://www.nilaappsindia.com/Assets/images/web_logo.png" alt="Logo"></a></div>
+
+  
+  <div class="container-fluid">
+    <ul class="navbar-nav d-flex align-items-center">
+      <li class="nav-item">
+        <a class="navbar-brand" href="#">
+          <img src="https://www.nilaappsindia.com/Assets/images/web_logo.png" alt="Logo" />
+        </a>
+      </li>
+    </ul>
+
+
+
+    <div class="col-md-auto nav-button d-flex">
+
+      <div class="search-icon" *ngIf="!isSearchbar">
+        <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color align-items-center mt-1" aria-hidden="true" data-mat-icon-type="font" style="color: #fff !important;" (click)="openSeachbar('open')">search</mat-icon> 
+      </div>
+
+      <div class="search-container" *ngIf="isSearchbar">
+        
+        <div class="wrap">
+          <div class="search">
+             <input type="text" class="searchTerm" placeholder="What are you looking for?">
+          </div>
+       </div>
+
+        <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color align-items-center mt-2" aria-hidden="true" data-mat-icon-type="font" style="color: #fff !important;" (click)="openSeachbar('close')">close</mat-icon>
+      </div>
+
+      <div class="location-select d-flex">
+        <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color align-items-center mt-1" aria-hidden="true" data-mat-icon-type="font" style="color: #fff !important;">location_city</mat-icon> &nbsp;&nbsp;
+        <mat-select [(ngModel)]="selectedValue" class="mt-2">
+          <mat-option *ngFor="let data of options" [value]="data.value">{{data.viewValue}}</mat-option>
+        </mat-select>
+      </div>
+      <div class="profile-icon">
+        <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color align-items-center mt-1" aria-hidden="true" data-mat-icon-type="font" style="color: #fff !important;">account_circle</mat-icon> 
+      </div>
+
+
+    </div>
+
+
+  </div>
+</nav>
+  
+  
+  
+  
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+  <div class="navbar-content">
+    <ul class="navbar-nav d-flex align-items-center">
+      <li class="nav-item">
+        <a class="navbar-brand" href="#">
+          <img src="https://www.nilaappsindia.com/Assets/images/web_logo.png" alt="Logo" />
+        </a>
+      </li>
+      <li class="nav-item">
+        <mat-form-field appearance="outline">
+          <mat-label>Location</mat-label>
+          <mat-select>
+            <mat-option value="location1">Location 1</mat-option>
+            <mat-option value="location2">Location 2</mat-option>
+            <mat-option value="location3">Location 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </li>
+    </ul>
+
+    <div class="ml-auto d-flex align-items-center">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <div class="profile-icon ml-3">
+        <i class="fas fa-user-circle"></i>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+  

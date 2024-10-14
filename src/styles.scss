@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  color: rgb(0, 60, 113) !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background: #dfd5d5 !important;
+    font-size:14px !important;
+}
+
+
+
+.content {
+    margin-left: 190px; /* Adjust based on sidebar width */
+    padding: 10px;
+    // transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar.active + .content  + .navbar{
+    margin-left: 0; /* Adjust when sidebar is active */
+  }
+  
+  .shifted {
+    margin-left: 190px; /* Adjust based on sidebar width */
+  }
+  
+  .nshifted{
+    margin-left: 55px; /* Adjust based on sidebar width */
+  }
+
+

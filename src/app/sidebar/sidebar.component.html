@@ -1,0 +1,14 @@
+<div class="sidebar" [class.active]="isActive">
+    <div class="hamburger" (click)="toggleSidebar()">
+      <mat-icon>{{ isActive ? 'menu' : 'menu' }}</mat-icon>
+    </div>
+    <ul>
+      <li *ngFor="let item of menuItems" >
+        <mat-icon (click)="menuClick(item.id)">{{ item.icon }}</mat-icon>
+        <span *ngIf="!isActive">{{ item.label }}</span>
+      </li>
+    </ul>
+  </div>
+  
+
+  
