@@ -22,7 +22,9 @@
     // background-color: red;
     border-right: 2px solid #2471a3 !important;
     height: auto;
+    background: #fff !important;
   }
+
 
 //   ::ng-deep .mat-expansion-panel-body{
 //     padding: 0 5px 0px !important;
@@ -30,6 +32,16 @@
 
 
 
+::ng-deep .mat-accordion .mat-expansion-panel:not(.mat-expanded), .mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing) {
+  border-radius: 0;
+  background: #fff !important;
+  margin-top: 2px !important;
+}
+
+::ng-deep .mat-divider{
+  color: #bbb4b4 !important;
+
+}
 ::ng-deep .mat-expansion-panel-header{
   height: auto !important;
 }
